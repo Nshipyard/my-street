@@ -1,0 +1,1 @@
+{"dependencies":{"lucide-react":"^0.454.0","next":"^14.2.35","react":"18.3.1","react-dom":"18.3.1"},"description":"What's Happening on My Street? Weekly street-level intelligence for Toronto, built on the city's open data.","name":"my-street","private":true,"scripts":{"build":"next build","dev":"next dev","start":"next start"},"version":"0.1.0"}
