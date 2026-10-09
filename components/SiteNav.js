@@ -14,11 +14,12 @@ export default function SiteNav() {
   return (
     <nav className="nav">
       <div className="wrap nav-inner">
-        <a className="brand" href="#top">
+        <a className="brand display" href="#top">
           <span className="brand-mark">
             <MapPin size={18} />
           </span>
           My Street
+          <span className="brand-badge">Toronto</span>
         </a>
         <button
           className="nav-toggle"
@@ -30,7 +31,7 @@ export default function SiteNav() {
         </button>
         <div className={`nav-links${open ? " open" : ""}`}>
           {links.map((l) => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)}>
+            <a key={l.href} href={l.href} className="nav-link" onClick={() => setOpen(false)}>
               {l.label}
             </a>
           ))}

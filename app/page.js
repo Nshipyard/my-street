@@ -5,7 +5,6 @@ import { getRoadRestrictions, permitsTotal } from "@/lib/toronto";
 import {
   BellRing,
   CheckCircle2,
-  Database,
   FileText,
   HardHat,
   Construction,
@@ -40,10 +39,8 @@ export default async function Page() {
       <main id="top">
         <header className="hero">
           <div className="wrap">
-            <span className="eyebrow">
-              <Database size={14} /> Built on Toronto open data
-            </span>
-            <h1>What&apos;s happening on your street this week?</h1>
+            <p className="eyebrow">Built on Toronto open data</p>
+            <h1 className="display">What&apos;s happening on your street this week?</h1>
             <p className="lede">
               Road work, building permits, and construction notices within 500 metres of
               your front door, pulled live from the City of Toronto&apos;s open data.
@@ -57,7 +54,7 @@ export default async function Page() {
           <div className="wrap">
             <div className="sec-head">
               <p className="sec-kicker">How it works</p>
-              <h2>Three steps, about ten seconds</h2>
+              <h2 className="display">Three steps, about ten seconds</h2>
               <p>
                 The city already publishes this information. We just connect it to your
                 address.
@@ -92,11 +89,11 @@ export default async function Page() {
           </div>
         </section>
 
-        <section id="track" style={{ background: "var(--bg-soft)" }}>
+        <section id="track">
           <div className="wrap">
             <div className="sec-head">
               <p className="sec-kicker">What we track</p>
-              <h2>Two live feeds, zero guesswork</h2>
+              <h2 className="display">Two live feeds, zero guesswork</h2>
               <p>
                 Every number below is read from the city&apos;s open data portal when
                 this page loads.
@@ -107,7 +104,7 @@ export default async function Page() {
                 <span className="card-icon">
                   <Construction size={22} />
                 </span>
-                <p className="stat">{fmt(restrictionCount)}</p>
+                <p className="stat display">{fmt(restrictionCount)}</p>
                 <h3>Road restrictions</h3>
                 <p>
                   Closures, lane reductions, and construction zones with real
@@ -118,7 +115,7 @@ export default async function Page() {
                 <span className="card-icon">
                   <HardHat size={22} />
                 </span>
-                <p className="stat">{fmt(permitCount)}</p>
+                <p className="stat display">{fmt(permitCount)}</p>
                 <h3>Active building permits</h3>
                 <p>
                   Authorized construction across the city, matched to your street by
@@ -144,10 +141,8 @@ export default async function Page() {
           <div className="wrap fresh-grid">
             <div>
               <p className="sec-kicker">Staying fresh</p>
-              <h2 style={{ fontSize: 34, margin: "0 0 12px", letterSpacing: "-0.015em" }}>
-                Fresh data is the whole product
-              </h2>
-              <p style={{ color: "var(--ink-soft)", fontSize: 17, margin: 0 }}>
+              <h2 className="display">Fresh data is the whole product</h2>
+              <p style={{ color: "var(--ink-soft)", fontSize: 17, lineHeight: 1.6, margin: 0 }}>
                 A street briefing is only useful if it reflects this week, not last
                 year. Here is exactly how each feed stays current.
               </p>
@@ -211,12 +206,12 @@ export default async function Page() {
           <div className="wrap">
             <div className="cta-band">
               <BellRing size={36} style={{ marginBottom: 16 }} />
-              <h2>Know before the jackhammers do</h2>
+              <h2 className="display">Know before the jackhammers do</h2>
               <p>
                 Enter your address above and leave your email. When new road work or
                 permits appear near your home, you hear about it first.
               </p>
-              <a className="btn btn-primary" href="#lookup">
+              <a className="btn btn-white" href="#lookup">
                 <MapPin size={18} /> Check my street
               </a>
             </div>
@@ -227,7 +222,7 @@ export default async function Page() {
           <div className="wrap">
             <div className="sec-head" style={{ textAlign: "center", margin: "0 auto 36px" }}>
               <p className="sec-kicker">FAQ</p>
-              <h2>Questions, answered plainly</h2>
+              <h2 className="display">Questions, answered plainly</h2>
             </div>
             <Faq />
           </div>
@@ -236,8 +231,11 @@ export default async function Page() {
 
       <footer>
         <div className="wrap foot-inner">
-          <span>My Street: a Toronto street briefing built on open data.</span>
+          <span className="foot-brand display">My Street</span>
           <div className="foot-links">
+            <a href="https://canada.nshipyard.com" target="_blank" rel="noreferrer">
+              An Open Nshipyard project
+            </a>
             <a href="https://open.toronto.ca" target="_blank" rel="noreferrer">
               Toronto Open Data
             </a>
