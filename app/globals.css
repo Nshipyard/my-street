@@ -272,3 +272,8 @@ footer { border-top: 1px solid var(--line); padding: 48px 0; color: var(--ink-fa
   .briefing-card { padding: 24px 20px; border-radius: 24px; }
   .brand-badge { display: none; }
 }
+
+/* Sticky-nav anchor offset: in-page anchors never hide under the fixed header. */
+section[id] {
+  scroll-margin-top: 88px;
+}
