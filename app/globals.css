@@ -63,6 +63,11 @@ section { padding: 88px 0; }
   color: var(--canada);
   display: inline-flex; align-items: center; justify-content: center;
 }
+.brand-stack { display: inline-flex; flex-direction: column; line-height: 1.15; }
+.brand-eyebrow {
+  font-family: "Inter", sans-serif; font-size: 10px; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint);
+}
 
 /* ---------- honesty banner (family shared) ---------- */
 .honesty { background: var(--ink); color: #fff; }

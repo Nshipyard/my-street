@@ -19,7 +19,10 @@ export default function SiteNav() {
           <span className="brand-mark">
             <MapleLeaf size={20} />
           </span>
-          My Street
+          <span className="brand-stack">
+            <span className="brand-eyebrow">Open Nshipyard</span>
+            <span>My Street</span>
+          </span>
           <span className="brand-badge">Toronto</span>
         </a>
         <button
