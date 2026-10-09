@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X, MapPin } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import MapleLeaf from "./MapleLeaf";
 
 export default function SiteNav() {
   const [open, setOpen] = useState(false);
@@ -16,7 +17,7 @@ export default function SiteNav() {
       <div className="wrap nav-inner">
         <a className="brand display" href="#top">
           <span className="brand-mark">
-            <MapPin size={18} />
+            <MapleLeaf size={20} />
           </span>
           My Street
           <span className="brand-badge">Toronto</span>

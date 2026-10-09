@@ -1,4 +1,5 @@
 import SiteNav from "@/components/SiteNav";
+import HonestyBanner from "@/components/HonestyBanner";
 import BriefingTool from "@/components/BriefingTool";
 import Faq from "@/components/Faq";
 import { getRoadRestrictions, permitsTotal } from "@/lib/toronto";
@@ -35,6 +36,7 @@ export default async function Page() {
 
   return (
     <>
+      <HonestyBanner />
       <SiteNav />
       <main id="top">
         <header className="hero">
@@ -243,6 +245,22 @@ export default async function Page() {
               OSM contributors
             </a>
           </div>
+        </div>
+        <div className="wrap foot-fine">
+          <p>
+            An open-source civic project by Nshipyard. Not affiliated with the
+            Government of Canada or the City of Toronto.
+          </p>
+          <p>
+            Built by{" "}
+            <a href="https://x.com/richardsondx" target="_blank" rel="noreferrer">
+              Richardson Dackam
+            </a>{" "}
+            ·{" "}
+            <a href="https://github.com/richardsondx" target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+          </p>
         </div>
       </footer>
     </>
