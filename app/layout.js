@@ -1,4 +1,5 @@
 import "./globals.css";
+import { PosthogProvider } from "../components/PosthogProvider";
 
 const SITE_URL = "https://my-street.canada.nshipyard.com";
 const TITLE = "What's Happening on My Street? | Toronto street briefing";
@@ -62,7 +63,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body><PosthogProvider>{children}</PosthogProvider></body>
     </html>
   );
 }
