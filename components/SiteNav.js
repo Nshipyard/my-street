@@ -39,6 +39,13 @@ export default function SiteNav() {
               {l.label}
             </a>
           ))}
+          <a
+            href="https://canada.nshipyard.com"
+            className="nav-link"
+            onClick={() => setOpen(false)}
+          >
+            <span aria-hidden="true">&larr;</span> All projects
+          </a>
           <a href="#lookup" className="btn btn-primary" onClick={() => setOpen(false)}>
             Check my street
           </a>
